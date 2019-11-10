@@ -1,0 +1,154 @@
+.final-payment {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	width: 90%;
+	margin-top: 2%;
+}
+.description-payment {
+	width: 75%;
+	border-bottom: 1px solid #c8c8c8;
+	padding-bottom: 1.5%;
+}
+.description-payment__header {
+	display: flex;
+	padding: 1.6% 10% 1.6% 18%;
+	border-bottom: 1px solid #c8c8c8;
+}
+.description-payment__header_p {
+	width: 125px;
+	height: 9.2px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 0.57;
+	letter-spacing: normal;
+	text-align: right;
+	color: #000000;
+	text-transform: uppercase;
+}
+.description-payment__header_p:nth-child(2) {
+	margin-left: 11.6%;
+}
+.description-payment__header_p:nth-child(3) {
+	margin-left: 5.8%;
+}
+.advertising {
+	width: 25%;
+}
+.advertising-img {
+	float: right;
+	width: 303px;
+	height: 303px;
+}
+.pay-footer {
+	width: 75%;
+	height: 200px;
+	display: flex;
+	padding-top: 1.6%;
+}
+.coupon {
+	width: 50%;
+}
+.total-pay {
+	width: 50%;
+}
+.total-pay_name {
+	padding-top: 2.3%;
+	width: 71.5%;
+	font-size: 20px;
+	line-height: 1;
+	text-align: right;
+	color: #000000;
+	margin-bottom: 2.3%;
+	margin-left: 9%;
+}
+.total-pay_name p:first-child{
+	float: left;
+}
+.total-pay_name p:last-child{
+	float: right;
+}
+.total-pay_name:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.banner {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: 0.3px 5px 10px 0 rgba(9, 9, 9, 0.2), 1.4px 20px 221px 0 rgba(255, 255, 255, 0.5);
+  	background-color: #ffffff;
+	justify-content: space-around;
+	padding-top: 5%;
+	padding-left: 5%;
+	padding-bottom: 5%;
+}
+.banner_style {
+	margin-top: 10%;
+}
+.banner_p:first-child {
+	width: 40%;
+	font-size: 20px;
+  	line-height: 1.5;
+  	padding-top: 5px;
+  	margin-top: 1%;
+  	margin-left: 12%;
+ 	color: #282828;
+}
+.banner_p:nth-child(2){
+	width: 40%;
+	font-size: 30px;
+  	line-height: 1.5;
+ 	color: #000000;
+}
+/*main*/
+.product-item {
+	display: flex;
+	align-items: center;
+	margin-top: 1.5%;
+}
+.product-img_margin {
+	margin-right: 3%;
+}
+.product-name_margin {
+	margin-right: 9%;
+}
+.product-price_margin {
+	margin-right: 14%;
+}
+.product-price-all_margin {
+	margin-left: 15%;
+}
+.product-name {
+	width: 17.1%;
+}
+.product-name__first {
+	font-size: 16px;
+	font-weight: 600;
+	color: #1c1c1b;
+}
+.product-name__last {
+	font-size: 14px;
+	font-weight: 600;
+	color: #878786;
+}
+.product-price {
+	color: #878786;
+	font-size: 14px;
+  	font-weight: 600
+}
+.product-price-all {
+  	font-size: 16px;
+  	font-weight: 500;
+  	line-height: 1;
+  	text-align: right;
+  	color: #000000;
+}
+.search-form__input_coupon {
+	width: 45%;
+	margin-right: 2%;
+}
+.total-pay {
+	width: 45%;
+}

@@ -1,0 +1,52 @@
+/*header*/
+.header {
+	height: 9.0625rem;
+}
+.header-up {
+	height: 100px;
+	display: flex;
+	align-items: center;
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+.name-site {
+	display: block;
+	width: 10.5rem;
+	height: 3.375rem;
+	background: url(../src/svg/logo.svg);
+}
+.search-form_style {
+	margin-left: 8.1rem;
+	display: flex;
+}
+.search-form__input {
+	width: 20.34rem;
+	height: 2.5rem;
+	border: solid 1px #e0e0e0;
+	color: #e0e0e0;
+	outline: none;
+	padding-left: 2%;
+	border-radius: 2px 0px 0px 2px;
+}
+
+.header-down {
+	display: flex;
+	padding-left: 5.04rem;
+	align-items: center;
+	height: 2.8125rem;
+	background-color: #f4f4f4;
+}
+.header-down__nav {
+	width: 63.4rem;
+}
+.header-down__nav_link {
+	margin-right: 2.5rem;
+	color: #737270;
+}
+.icon {
+	width: 25px;
+	height: 25px;
+	background-color: red;
+	fill: #C8C8C8;
+    fill-rule: evenodd;
+}

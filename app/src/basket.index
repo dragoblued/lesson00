@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>magazine</title>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/head.css">
+    <link rel="stylesheet" href="style/content-address.css">
+    <link rel="stylesheet" href="style/finall-pay.css">
+    <link rel="stylesheet" href="style/atomic.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header-up">
+				<div class="name-site">
+					<p class="name-site__p ">SH<span class="name-site_green">O</span>PPE</p>
+					<p class="name-site__p">Smart Marketplace</p>
+				</div>
+				
+				<form class="search-form search-form_style">
+					<input type="search" class="search-form__input search-form__input_style" placeholder="Search for Products">
+					<input type="submit" class="button button_search button_active" value="Search"></input>
+				</form>
+				<button class="button button_request button_request_style">
+					Request Quote
+				</button>
+				<button class="button button_dashboard button_dashboard_9">
+					Dashbourd
+				</button>
+				<svg class="icon" viewBox="0 0 32 27" transform="translate(-1250.000000, -40.000000)">
+	                     <use xlink:href="src/svg/icons.svg?#buscket"></use>
+	            </svg>
+				<div class="icon-profile"></div>
+			</div>
+			<div class="header-down">
+				<nav class="header-down__nav">
+					<a href="#" class="header-down__nav_link">Home Decor</a>
+					<a href="#" class="header-down__nav_link">Furniture</a>
+					<a href="#" class="header-down__nav_link">Lighting</a>
+					<a href="#" class="header-down__nav_link">Home Accents</a>
+					<a href="#" class="header-down__nav_link">Rugs</a>
+					<a href="#" class="header-down__nav_link">Outdoors</a>
+					<a href="#" class="header-down__nav_link">Holidays</a>
+					<a href="#" class="header-down__nav_link">Gifts</a>
+					<a href="#" class="header-down__nav_link">Events</a>
+				</nav>
+			</div>
+		</header>
+		<div class="content">
+			<div class="block-path">
+				<p class="block-path__name">Home &#9658;</p>
+				<p class="block-path__name">Cart</p>
+			</div>
+			<div class="final-payment">
+				<div class="description-payment">
+				</div>
+				<div class="advertising">
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="description">
+					<h2 class="description__h">How We Help</h2>
+					<ul>
+						<li><a href="#" class="description__link">Retailers </a></li>
+						<li><a href="#" class="description__link">Interiors Designers </a></li>
+						<li><a href="#" class="description__link">Product Designers </a></li>
+						<li><a href="#" class="description__link">Wholesalers/Importers </a></li>
+						<li><a href="#" class="description__link">Artisans</a></li>
+					</ul>
+				</div>
+				<div class="description">
+					<h2 class="description__h">Get to Know Us</h2>
+					<ul>
+						<li><a href="#" class="description__link">About</a></li>
+						<li><a href="#" class="description__link">Policies</a></li>
+						<li><a href="#" class="description__link">Careers</a></li>
+						<li><a href="#" class="description__link">Press</a></li>
+					</ul>
+				</div>
+				<div class="description">
+					<h2 class="description__h">Join the Community</h2>
+					<ul>
+						<li><a href="#" class="description__link">Upcoming Events </a></li>
+						<li><a href="#" class="description__link">Become a Buyer </a></li>
+						<li><a href="#" class="description__link">Become a Seller</a></li>
+					</ul>
+				</div>
+				<div class="description">
+					<h2 class="description__h">Follow Us</h2>
+					<ul>
+						<li><a href="#" class="description__link">Facebook</a></li>
+						<li><a href="#" class="description__link">Pinterest</a></li>
+						<li><a href="#" class="description__link">Twitter</a></li>
+						<li><a href="#" class="description__link">Instagram</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">        
+				<aside class="footer-bottom__text">© 2016 Uimint.com </aside>
+				<aside class="footer-bottom__text">Terms & Conditions </aside>
+				<aside class="footer-bottom__text">Privacy</aside>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
