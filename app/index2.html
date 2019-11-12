@@ -6,10 +6,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/head.css">
-    <link rel="stylesheet" href="css/category.css">
     <link rel="stylesheet" href="css/content-address.css">
     <link rel="stylesheet" href="css/atomic.css">
-    <link rel="stylesheet" href="css/home.css">
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
@@ -47,12 +45,61 @@
 			</div>
 		</header>
 		<div class="content">
-			<div class="home">
-					<div class="center"></div>
-					<div class="home-left">
-					</div>
-					<div class="home-right">
-					</div>
+			<div class="block-path">
+				<p class="block-path__name">Home </p>
+				<p class="block-path__name">Cart </p>
+				<p class="block-path__name">Checkout</p>
+			</div>
+			<div class="block-text">
+				<p class="block-text__adress block-text_active" >Shipping address</p>
+				<p class="block-text__pay ">Payment</p>
+			</div>
+			<div class="block-address block-address_one">
+				<label class="label">First Name*<p class="required">* Required</p>
+					<input type="text" placeholder="Jhone" class="input-text">
+				</label>
+				<label class="label">Last Name*<p class="required">* Required</p>
+					<input type="text" placeholder="Smith" class="input-text">
+				</label>
+				<label class="label">Company Name<p class="required">* Required</p>
+					<input type="text" placeholder="Rosuson Industries" class="input-text">
+				</label>
+				<label class="label">Country*<p class="required">* Required</p>
+					<select name="select" class="input-text input-text__country"> 
+					  <option value="value1"selected>United Kingdom (UK)</option> 
+					  <option value="value2" >Russia</option>
+					  <option value="value3">Norway</option>
+					</select>
+				</label>
+				<label class="label">Town/City*<p class="required">* Required</p>
+					<input type="text" placeholder="eg. New York" class="input-text">
+				</label>
+				<label class="label">Postcode*<p class="required">* Required</p>
+					<input type="text" placeholder="eg. 358745" class="input-text">
+				</label>
+				<label class="label">Address*<p class="required">* Required</p>
+					<input type="text" placeholder="eg. 2nd steer, Costrica, Uk 354548" class="input-text input-text_address">
+				</label>
+				<label class="label">Email Address*<p class="required">* Required</p>
+					<input type="text" placeholder="abc@xyz.com" class="input-text">
+				</label>
+				<label class="label">Phone
+					<input type="text" placeholder="eg. 94 788 1221" class="input-text">
+				</label>	
+				<div class="check">
+					<input type="checkbox" class="checkbox" id="checkbox">
+					<label class="checkbox-label" for="checkbox"></label>
+					<input type="checkbox" class="checkbox" id="checkboxtwo">
+					<label class="checkbox-label" for="checkboxtwo"></label>
+				</div>
+				<div class="block-address-footer">
+					<button class="button button_dashboard button_back">
+					Back
+					</button>
+					<button class="button button_dashboard  button_next">
+						Next
+					</button>
+				</div>
 			</div>
 		</div>
 		<footer class="footer">
@@ -113,5 +160,4 @@
 		</footer>
 	</div>
 </body>
- <script type="text/javascript" src="index.js"></script>
 </html>
