@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/category.css">
     <link rel="stylesheet" href="css/content-address.css">
     <link rel="stylesheet" href="css/atomic.css">
+    <link rel="stylesheet" href="css/finall-pay.css">
     <link rel="stylesheet" href="css/home.css">
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="module" src="js/index.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -44,16 +45,22 @@
 					<a href="#" class="header-down__nav_link">Gifts</a>
 					<a href="#" class="header-down__nav_link">Events</a>
 				</nav>
+				<div class="menu-item menu-item_position">
+					<div class="menu-item-header">
+						<div>
+							<p class="menu-name">Home Decor</p>
+							<p class="menu-nametwo">Create & live your unique style</p>
+						</div>
+						<p class="menu-name-count">25478 items</p>
+					</div>
+					<div class="menu-item-footer">
+					</div>
+				</div>
+			</div>
+			<div class="total-sum">
 			</div>
 		</header>
 		<div class="content">
-			<div class="home">
-					<div class="center"></div>
-					<div class="home-left">
-					</div>
-					<div class="home-right">
-					</div>
-			</div>
 		</div>
 		<footer class="footer">
 			<div class="footer-top">
@@ -112,6 +119,91 @@
 			</div>
 		</footer>
 	</div>
+	<template id="content-home">
+		<div class="home">
+			<div class="center"></div>
+			<div class="home-left"></div>
+			<div class="home-right"></div>
+		</div>
+	</template>
+	<template id="content-basket">
+		<div class="block-path">
+			<p class="block-path__name">Home </p>
+			<p class="block-path__name">Cart</p>
+		</div>
+		<div class="final-payment">
+			<div class="description-payment">
+				<div class="description-payment__header">
+					<p class="description-payment__header_p">item detail</p>
+					<p class="description-payment__header_p">price</p>
+					<p class="description-payment__header_p">qtv</p>
+				</div>
+				<div class="product-item">
+					<button class="button-delete button-delete_style"></button>
+					<div class="product-img product-img_margin">
+						<img src="src/img/table-2.png" class="product-img_style">
+					</div>
+					<div class="product-name product-name_margin">
+						<p class="product-name__first">Product Name Here</p>
+						<p class="product-name__last">Supplier’s Name Here</p>
+					</div>
+					<p class="product-price product-price_margin">$28.99</p>
+					<input type="text" name="" class="product-count" placeholder="1">
+					<p class="product-price-all product-price-all_margin">$28.99</p>
+				</div>
+				<div class="product-item">
+					<button class="button-delete button-delete_style"></button>
+					<div class="product-img product-img_margin">
+						<img src="src/img/cheir-white2.png" class="product-img_style">
+					</div>
+					<div class="product-name product-name_margin">
+						<p class="product-name__first">Product Name Here</p>
+						<p class="product-name__last">Supplier’s Name Here</p>
+					</div>
+					<p class="product-price product-price_margin">$28.99</p>
+					<input type="text" name="" class="product-count" placeholder="1">
+					<p class="product-price-all product-price-all_margin">$28.99</p>
+				</div>
+				<div class="product-item">
+					<button class="button-delete button-delete_style"></button>
+					<div class="product-img product-img_margin">
+						<img src="src/img/table-white2.png" class="product-img_style">
+					</div>
+					<div class="product-name product-name_margin">
+						<p class="product-name__first">Product Name Here</p>
+						<p class="product-name__last">Supplier’s Name Here</p>
+					</div>
+					<p class="product-price product-price_margin">$28.99</p>
+					<input type="text" name="" class="product-count" placeholder="1">
+					<p class="product-price-all product-price-all_margin">$28.99</p>
+				</div>
+			</div>
+			<div class="advertising">
+				<img src="src/img/ad.png" class="advertising-img">
+			</div>
+			<div class="pay-footer">
+				<form class="coupon">
+					<input type="text" class="search-form__input search-form__input_style search-form__input_coupon" placeholder="Coupon code">
+					<input type="submit" class="button button_passive" value="APPLAY"></input>
+				</form>
+				<div class="total-pay">
+					<div class="total-pay_name">
+						<p>Subtotal</p>
+						<p>$145.84</p>
+					</div>
+					<div class="total-pay_name">
+						<p>Shipping</p>
+						<p>$5.00</p>
+					</div>
+					<div class="banner banner_style">
+						<p class="banner_p">Total Amount</p>
+						<p class="banner_p">$254.84</p>
+						<button class="button button_active button_banner">PROCESS TO CHECKOUT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
 </body>
  <script type="text/javascript" src="index.js"></script>
 </html>

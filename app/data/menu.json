@@ -1,0 +1,47 @@
+{
+	"homedecor": {
+		"1": ["Pots & Pans ", "Pressure Cookers ", "Kitchen Tools "],
+		"2": ["Gas Stoves "],
+		"3": ["Dining & Serving ", "Dinnerware & Crockery ", "Bar & Glassware", "Flasks & Casseroles "]
+	},
+	"furniture": {
+		"1": ["Coffee Mugs "],
+		"2": [""],
+		"3": ["Lunch Boxes", "Dining tables & Sets", "Tables", "Wardrobess ", "Shoe Racks"]
+	},
+	"lighting": {
+		"1": ["Kitchen Storage ", "Kitchen Containers "],
+		"2": ["urniture ", "Deds", "Sofas", "Mattresses"],
+		"3": [""]
+	},
+	"homeaccents": {
+		"1": ["Chairs"],
+		"2": ["Beant Bags", "TV Units & Cabinets "],
+		"3": [""]
+	},
+	"rugs": {
+		"1": ["Dining & Serving ", "Dinnerware & Crockery ", "Bar & Glassware"],
+		"2": ["Coffee Mugs "],
+		"3": [""]
+	},
+	"outdoors": {
+		"1": ["Beant Bags", "TV Units & Cabinets "],
+		"2": ["Tables", "Wardrobess ", "Shoe Racks"],
+		"3": ["Tables", "Wardrobess ", "Shoe Racks"]
+	},
+	"holidays": {
+		"1": ["Dining & Serving ", "Dinnerware & Crockery "],
+		"2": ["Dining & Serving ", "Dinnerware & Crockery "],
+		"3": ["Dining & Serving ", "Dinnerware & Crockery "]
+	},
+	"gifts": {
+		"1": ["Tables", "Wardrobess ", "Shoe Racks"],
+		"2": [""],
+		"3": ["Dining & Serving ", "Dinnerware & Crockery ", "Bar & Glassware", "Flasks & Casseroles "]
+	},
+	"events": {
+		"1": ["Coffee Mugs "],
+		"2": ["Dining & Serving ", "Dinnerware & Crockery ", "Bar & Glassware", "Flasks & Casseroles "],
+		"3": ["Coffee Mugs "]
+	}
+}

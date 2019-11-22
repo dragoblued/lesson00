@@ -422,3 +422,12 @@ input[type="radio"]:checked + label:after {
 	fill: blue;
     cursor: pointer;
 }
+.total-sum {
+	position: absolute;
+	left: 1150px;
+	display: block;
+	width: 200px;
+	color: white;
+	background-color: black;
+	border: 1px solid black;
+}
