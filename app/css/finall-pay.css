@@ -10,6 +10,9 @@
 	border-bottom: 1px solid #c8c8c8;
 	padding-bottom: 1.5%;
 }
+.description-payment:first-child {
+	border-bottom: none;
+}
 .description-payment__header {
 	display: flex;
 	padding: 1.6% 10% 1.6% 18%;
@@ -73,7 +76,7 @@
 	display: block;
 	clear: both;
 }
-.banner {
+.banner-pay {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;

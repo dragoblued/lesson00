@@ -133,50 +133,13 @@
 		</div>
 		<div class="final-payment">
 			<div class="description-payment">
-				<div class="description-payment__header">
+					<div class="description-payment__header">
 					<p class="description-payment__header_p">item detail</p>
 					<p class="description-payment__header_p">price</p>
 					<p class="description-payment__header_p">qtv</p>
-				</div>
-				<div class="product-item">
-					<button class="button-delete button-delete_style"></button>
-					<div class="product-img product-img_margin">
-						<img src="src/img/table-2.png" class="product-img_style">
 					</div>
-					<div class="product-name product-name_margin">
-						<p class="product-name__first">Product Name Here</p>
-						<p class="product-name__last">Supplier’s Name Here</p>
-					</div>
-					<p class="product-price product-price_margin">$28.99</p>
-					<input type="text" name="" class="product-count" placeholder="1">
-					<p class="product-price-all product-price-all_margin">$28.99</p>
-				</div>
-				<div class="product-item">
-					<button class="button-delete button-delete_style"></button>
-					<div class="product-img product-img_margin">
-						<img src="src/img/cheir-white2.png" class="product-img_style">
-					</div>
-					<div class="product-name product-name_margin">
-						<p class="product-name__first">Product Name Here</p>
-						<p class="product-name__last">Supplier’s Name Here</p>
-					</div>
-					<p class="product-price product-price_margin">$28.99</p>
-					<input type="text" name="" class="product-count" placeholder="1">
-					<p class="product-price-all product-price-all_margin">$28.99</p>
-				</div>
-				<div class="product-item">
-					<button class="button-delete button-delete_style"></button>
-					<div class="product-img product-img_margin">
-						<img src="src/img/table-white2.png" class="product-img_style">
-					</div>
-					<div class="product-name product-name_margin">
-						<p class="product-name__first">Product Name Here</p>
-						<p class="product-name__last">Supplier’s Name Here</p>
-					</div>
-					<p class="product-price product-price_margin">$28.99</p>
-					<input type="text" name="" class="product-count" placeholder="1">
-					<p class="product-price-all product-price-all_margin">$28.99</p>
-				</div>
+			</div>
+			<div class="description-payment">
 			</div>
 			<div class="advertising">
 				<img src="src/img/ad.png" class="advertising-img">
@@ -189,19 +152,34 @@
 				<div class="total-pay">
 					<div class="total-pay_name">
 						<p>Subtotal</p>
-						<p>$145.84</p>
+						<p class="total-pay_name1">$145.84</p>
 					</div>
 					<div class="total-pay_name">
 						<p>Shipping</p>
-						<p>$5.00</p>
+						<p class="total-pay_name2">$5.00</p>
 					</div>
-					<div class="banner banner_style">
+					<div class="banner-pay banner_style">
 						<p class="banner_p">Total Amount</p>
-						<p class="banner_p">$254.84</p>
+						<p class="banner_p banner_p_price">$254.84</p>
 						<button class="button button_active button_banner">PROCESS TO CHECKOUT</button>
 					</div>
 				</div>
 			</div>
+		</div>
+	</template>
+	<template id="template-product">
+		<div class="product-item">
+			<button class="button-delete button-delete_style"></button>
+			<div class="product-img product-img_margin">
+				<img class="product-img_style">
+			</div>
+			<div class="product-name product-name_margin">
+				<p class="product-name__first"></p>
+				<p class="product-name__last"></p>
+			</div>
+			<p class="product-price product-price_margin"></p>
+			<input type="text" name="" class="product-count" placeholder="1">
+			<p class="product-price-all product-price-all_margin"></p>
 		</div>
 	</template>
 </body>

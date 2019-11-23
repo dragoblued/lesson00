@@ -1,5 +1,7 @@
+import Product from './Product.js';
 function createProduct(nameImg, firstName, lastName, price, size) {
 	nameImg = '../src/img/home/' + nameImg;
+	//let product = document.querySelector();s
 	let productItem = document.createElement('div');
 	let productCard = document.createElement('div');	
 	let productFooter = document.createElement('div');
@@ -43,8 +45,23 @@ function createProduct(nameImg, firstName, lastName, price, size) {
 		else if (size === 2)
 			productItem.classList.add('list-product-item_small');
 		return productItem;
+
 }
-export default function outputProtuct (product, home, size = 2) {
+function savingData(product, item) {
+	product.changeCount();
+	if (bascket.productAvailability(product) === false) {
+		bascket.addProduct(product);
+	}
+	bascket.totalAmount();
+	bascket.showBasket();
+	let data = JSON.stringify(bascket);
+	localStorage.setItem('bascket', data);
+	localStorage.setItem('price', bascket.getSum());
+}
+
+export default function outputProtuct (product, home, size = 2, i) {
 	let item = createProduct(product.name, product.firstName, product.lastName, product.pay, size);
 	home.appendChild(item);
+	products[i] = new Product(product.firstName, product.lastName, product.pay, item.firstChild.style.backgroundImage.split('/')[4].split('"')[0]);
+	item.addEventListener('click', () => savingData(products[i], item), true);
 }
