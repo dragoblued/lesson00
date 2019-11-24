@@ -1,4 +1,5 @@
 import render from './render.js';
+
 export default class Menu {
 	constructor() {
 		this.menuName = document.querySelector('.menu-name');
@@ -10,32 +11,34 @@ export default class Menu {
 		this.linkOver = this.linkOver.bind(this);
 		this.linkOut = this.linkOut.bind(this);
 	}
+
 	addEvents() {
 		for (let  i = 0; i < this.list.length; i++) {
- 			this.list[i].addEventListener('mouseover', this.linkOver);
-	 	}
-	 	for (let  i = 0; i < this.list.length; i++) {
-	 		this.list[i].addEventListener('mouseout', this.linkOut);
+ 			this.list[i].addEventListener('click', this.linkOver);
 	 	}
 	}
+
 	getTagsMenu(data) {
 		let name = this.nameMenu.replace(/\s/g, '').toLowerCase();
 		let ul = [];
 		for (let i = 0; i < 3; i++) {
 			let dataMenu = data[name]
 			ul[i] = document.createElement('ul');
-			let countTitle = dataMenu[i+1].length;
+			let countTitle = dataMenu[i + 1].length;
 			for (let y = 0; y < countTitle; y++) {
 				let li = document.createElement('li');
 				let a = document.createElement('a');
 				li.appendChild(a);
-				a.innerText = dataMenu[i+1][y];
-				a.href = "#";
+				a.innerText = dataMenu[i + 1][y];
+				a.addEventListener('click', () => {
+					location.hash = '#' + a.innerText;
+				});
 				ul[i].appendChild(li);
 			}
 			this.menuFooter.appendChild(ul[i]);
 		}
 	}
+
 	linkOver(event) {
 		this.menuFooter.innerHTML = '';
 		this.menuName.innerText = event.target.innerText;
@@ -44,6 +47,7 @@ export default class Menu {
 		this.menu.style.marginLeft = (event.clientX - 100) + 'px';
 		render('GET','http://localhost:3000/data/menu.json', this.getTagsMenu);
 	}
+
 	linkOut() {
 		let idTimer = setTimeout((menu) => {
 			//this.menu.style.display = 'none';

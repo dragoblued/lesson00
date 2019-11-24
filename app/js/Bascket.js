@@ -6,8 +6,14 @@ export default class Basket {
 
 	addProduct(product) {
 		this.nameProducts.push(product);
-		this.sumPrice += Number(product.price.slice(1))*product.count;
+		this.sumPrice += Number(product.price.slice(1)) * product.count;
 	}
+
+	clear() {
+		this.nameProducts = [];
+		this.sumPrice = 0;
+	}
+	
 	productAvailability(product) {
 		for (let i = 0; i < this.nameProducts.length; i++) {
 			if (this.nameProducts[i].firstName === product.firstName) {
@@ -16,6 +22,7 @@ export default class Basket {
 		}
 		return false;
 	}
+
 	deleteProduct(product) {
 		let index;
 		for (let i = 0; i < this.nameProducts.length; i++) {
@@ -24,12 +31,25 @@ export default class Basket {
 				break;
 			}
 		} 
-		this.sumPrice -= Number(this.nameProducts[index].price.slice(1))*this.nameProducts[index].count;
+		this.sumPrice -= Number(this.nameProducts[index].price.slice(1)) * this.nameProducts[index].count;
 		this.nameProducts.splice(index, 1);
 	}
+
 	getSum() {
 		return this.sumPrice;
 	}
+
+	changeCount(product, count) {
+		let countPrevious = 0;
+		for (let i = 0; i < this.nameProducts.length; i++) {
+			if (product == this.nameProducts[i].firstName) {
+				countPrevious = this.nameProducts[i].count;
+				this.nameProducts[i].count = count;
+				this.sumPrice += Number(this.nameProducts[i].price.slice(1)) * (count - countPrevious);
+			}
+		} 
+	}
+
 	totalAmount() {
 		this.sumPrice = this.nameProducts.reduce((accumulator, currentValue) => {
 			return accumulator + currentValue.price.slice(1) * currentValue.count;
@@ -38,18 +58,6 @@ export default class Basket {
 
 	showBasket() {
 		let div = document.querySelector('.total-sum');
-		let ul = document.createElement('ul');
-		let p = document.createElement('p');
-		div.innerText = '';
-		if (this.nameProducts.length !== 0) {
-			for (let  i = 0; i < this.nameProducts.length; i++) {
-				let li = document.createElement('li');
-				li.innerText = 'Name: ' + this.nameProducts[i].firstName + ' price ' +  this.nameProducts[i].price + ' count ' + this.nameProducts[i].count;
-				ul.appendChild(li);
-			}
-			div.appendChild(ul);
-			p.innerText = 'Total sum: ' + this.sumPrice;
-			div.appendChild(p);
-		}
+		div.innerText = '$'+ this.sumPrice;
 	}
 }

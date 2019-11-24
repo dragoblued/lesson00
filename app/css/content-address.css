@@ -40,9 +40,7 @@
 .checkbox-name {
 	display: inline-block;	
 }
-.label:nth-child(7) > .required {
-	display: block;
-}
+
 .block-text {
 	display: flex;
 	margin: 0 auto;

@@ -15,7 +15,7 @@
 		"name": "layer-31.png",
 		"firstName": "Солнцезащитные очки",
 		"lastName": "Product Name Here",
-		"pay": "$29.4" 
+		"pay": "$29" 
 	},
 	{
 		"name": "image_14.png",
@@ -27,7 +27,7 @@
 		"name": "image_9.png",
 		"firstName": "Сапоги",
 		"lastName": "Product Name Here",
-		"pay": "$3.75" 
+		"pay": "$3" 
 	},
 	{
 		"name": "image_8.png",
@@ -39,7 +39,7 @@
 		"name": "image_7.png",
 		"firstName": "Чайник",
 		"lastName": "Product Name Here",
-		"pay": "$2.5" 
+		"pay": "$2" 
 	},
 	{
 		"name": "image_6.png",
@@ -57,7 +57,7 @@
 		"name": "image_3.png",
 		"firstName": "Футболка",
 		"lastName": "Product Name Here",
-		"pay": "$3.7" 
+		"pay": "$3" 
 	},
 	{
 		"name": "image_13.png",
@@ -81,7 +81,7 @@
 		"name": "image_10.png",
 		"firstName": "Туфли",
 		"lastName": "Product Name Here",
-		"pay": "$4.5" 
+		"pay": "$4" 
 	},
 	{
 		"name": "image_5.png",
@@ -99,6 +99,6 @@
 		"name": "image.png",
 		"firstName": "Схема",
 		"lastName": "Product Name Here",
-		"pay": "$3.5" 
+		"pay": "$3" 
 	}]
 }

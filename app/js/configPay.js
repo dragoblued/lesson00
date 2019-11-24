@@ -21,9 +21,20 @@ export default function configPay() {
 		listProduct[1].appendChild(template);
 		if (bascket.productAvailability(data[i]) === false) {
 			bascket.addProduct(data[i]);
+			bascket.showBasket();
 		}
+		input.addEventListener('change', (e) => {
+			input.placeholder = input.value;
+			bascket.changeCount(data[i].firstName, input.placeholder);
+			let dataAdd = JSON.stringify(bascket);
+			localStorage.setItem('bascket', dataAdd);
+			bascket.showBasket();
+			configPay();
+
+		});
 		buttonDelete.addEventListener('click', (e) => {
  			bascket.deleteProduct(data[i].firstName);
+ 			bascket.showBasket();
 			let dataAdd = JSON.stringify(bascket);
 			localStorage.setItem('bascket', dataAdd);
 			configPay();
@@ -34,4 +45,5 @@ export default function configPay() {
 	totalPay.innerText = '$' + bascket.getSum();
 	let allPrice = document.querySelector('.banner_p_price');
 	allPrice.innerText = '$' + (bascket.getSum() + Number(shiping.innerText.slice(1)));
+	localStorage.setItem('sum', allPrice.innerText);
 }

@@ -45,6 +45,7 @@
 .product-name__first2 {
 	font-size: 14px;
 	font-weight: 600;
+	width: 120px;
 	line-height: 1.29;
 	letter-spacing: 0.28px;
 	color: #878786;

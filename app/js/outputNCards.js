@@ -1,6 +1,7 @@
 import outputProtuct from './outputProduct.js';
 
 export default function outputNCards(data) {
+	
 	let home = document.querySelector('.center');
 	let homeLeft = document.querySelector('.home-left');
 	let homeRight = document.querySelector('.home-right');
