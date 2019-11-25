@@ -1,4 +1,4 @@
-export default function sendRequest(type, path, callback) {
+/*export function render(type, path, callback) {
 	let xhr = new XMLHttpRequest();
 	xhr.open(type, path, true);
 	xhr.onload = () => {
@@ -10,4 +10,13 @@ export default function sendRequest(type, path, callback) {
 		}
 	};
 	xhr.send();
+}*/
+export default function returnObjectJSON (data) {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(JSON.parse(data));
+    } catch (e) {
+      reject(e);
+    }
+  });
 }

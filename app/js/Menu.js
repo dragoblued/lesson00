@@ -1,4 +1,5 @@
-import render from './render.js';
+import returnObjectJSON from './render.js';
+import PromiseXHR from './promiseXHR.js';
 
 export default class Menu {
 	constructor() {
@@ -45,7 +46,11 @@ export default class Menu {
 		this.nameMenu = event.target.innerText;
 		this.menu.style.display = 'block';
 		this.menu.style.marginLeft = (event.clientX - 100) + 'px';
-		render('GET','http://localhost:3000/data/menu.json', this.getTagsMenu);
+		const pkhr = new PromiseXHR();
+ 		pkhr.send('GET', 'http://localhost:3000/data/menu.json')
+ 			.then(result => returnObjectJSON(result))
+ 			.then(result => this.getTagsMenu(result))
+ 			.catch(error => console.log(error.message));
 	}
 
 	linkOut() {

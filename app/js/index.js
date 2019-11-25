@@ -1,10 +1,10 @@
 import outputNCards from './outputNCards.js';
-import render from './render.js';
+import returnObjectJSON from './render.js';
 import Menu from './Menu.js';
 import Bascket from './Bascket.js';
 import configPay  from './configPay.js';
 import {changeAddress, changePay} from './pay.js';
-
+import PromiseXHR from './promiseXHR.js';
 window.onload = () => {
  	let menu = new Menu();
 	window.bascket = new Bascket();
@@ -38,7 +38,11 @@ function changeHash() {
  		content.innerHTML = '';
  		let home = document.querySelector('#content-home');
  		content.appendChild(home.content.cloneNode(true));
- 		render('GET', 'http://localhost:3000/data/products.json', outputNCards);
+		const pkhr = new PromiseXHR();
+ 		pkhr.send('GET', 'http://localhost:3000/data/products.json')
+ 			.then(result => returnObjectJSON(result))
+ 			.then(result => outputNCards(result))
+ 			.catch(error => console.log(error.message));
 	}
 	if (hash == '#basket') {
  		let basketView = document.querySelector('#content-basket');
