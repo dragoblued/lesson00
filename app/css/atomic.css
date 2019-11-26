@@ -366,7 +366,11 @@ input[type="radio"]:checked + label:after {
 	height: 24.4rem;
 	box-shadow: 0.7px 10px 20px 0 rgba(9, 9, 9, 0.2);
 }
-
+.menu-transparent {
+	width: 38.75rem;
+	height: 20px;
+	opacity: 0;
+}
 .menu-item_position {
 	margin-left: 4.7rem;
 }

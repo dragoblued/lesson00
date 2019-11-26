@@ -72,10 +72,45 @@ export function changeAddress() {
 		location.hash  = '#basket';
 	}
 }
-
+function changeDataCard(save) {
+	let data = document.querySelectorAll('.input-text_name-card');
+	let dataCard = document.querySelector('.name-card');
+	console.log(dataCard);
+	let nameCard = data[0].value;
+	let cardNumber = data[1].value;
+	let validTrough = dataCard.children[0].children[0].value;
+	let cvv = dataCard.children[1].children[0].value;
+	console.log(cvv);
+	let emailCard = data[2].value;
+	if (save == 1) {
+		localStorage.setItem('nameCard', nameCard);
+		localStorage.setItem('cardNumber', cardNumber);
+		localStorage.setItem('validTrough', validTrough);
+		localStorage.setItem('cvv', cvv);
+		localStorage.setItem('emailCard', emailCard);
+	}
+	if (save == 0) {
+		if (localStorage['nameCard']) {
+			data[0].value = localStorage['nameCard'];
+		}
+		if (localStorage['cardNumber']) {
+			data[1].value = localStorage['cardNumber'];
+		}
+		if (localStorage['validTrough']) {
+			dataCard.children[0].children[0].value = localStorage['validTrough'];
+		}
+		if (localStorage['cvv']) {
+			dataCard.children[1].children[0].value = localStorage['cvv'];
+		}
+		if (localStorage['emailCard']) {
+			data[2].value = localStorage['emailCard'];
+		}
+	}
+}
 export function changePay() {
 	let content = document.querySelector('.payment-products');
 	content.innerHTML = '';
+	changeDataCard(0);
 	let data = JSON.parse(localStorage['bascket']).nameProducts;
 	for (let  i = 0; i < data.length; i++) {
 		let template = document.querySelector('#product-pay').content.cloneNode(true);
@@ -104,10 +139,12 @@ export function changePay() {
 	let address = document.querySelector('.block-address');
 	address.children[2].innerText = 'Payment ' + allPrice.innerText;
 	address.children[1].addEventListener('click', () => {
+		changeDataCard(1);
 		location.hash  = '#address';	
+		
 	});
 	address.children[2].addEventListener('click', () => {
+		changeDataCard(1);
 		location.hash  = '#paydone';	
 	});
-	console.log(address.lastChild.innerText);
 }

@@ -10,12 +10,12 @@ export default class Menu {
 		this.nameMenu = '';	
 		this.getTagsMenu = this.getTagsMenu.bind(this);
 		this.linkOver = this.linkOver.bind(this);
-		this.linkOut = this.linkOut.bind(this);
+		this.id = 0;
 	}
 
 	addEvents() {
 		for (let  i = 0; i < this.list.length; i++) {
- 			this.list[i].addEventListener('click', this.linkOver);
+ 			this.list[i].addEventListener('mouseover', this.linkOver);
 	 	}
 	}
 
@@ -32,7 +32,7 @@ export default class Menu {
 				li.appendChild(a);
 				a.innerText = dataMenu[i + 1][y];
 				a.addEventListener('click', () => {
-					location.hash = '#' + a.innerText;
+					location.hash = '#' + a.innerText.toLowerCase();
 				});
 				ul[i].appendChild(li);
 			}
@@ -45,26 +45,19 @@ export default class Menu {
 		this.menuName.innerText = event.target.innerText;
 		this.nameMenu = event.target.innerText;
 		this.menu.style.display = 'block';
-		this.menu.style.marginLeft = (event.clientX - 100) + 'px';
-		const pkhr = new PromiseXHR();
+		this.menu.style.marginLeft = event.target.getBoundingClientRect().left - 80 + 'px';
+		this.id = setTimeout(() => {this.menu.style.display = 'none'}, 1000);
+		this.menu.addEventListener('mouseover', () => {
+			clearTimeout(this.id);
+			this.menu.onmouseout = () => {
+				this.id = setTimeout(() => {this.menu.style.display = 'none'}, 1000);
+			};
+		})
+		
+ 		const pkhr = new PromiseXHR();
  		pkhr.send('GET', 'http://localhost:3000/data/menu.json')
  			.then(result => returnObjectJSON(result))
  			.then(result => this.getTagsMenu(result))
  			.catch(error => console.log(error.message));
-	}
-
-	linkOut() {
-		let idTimer = setTimeout((menu) => {
-			//this.menu.style.display = 'none';
-		}, 10000, this.menu);
-	    this.menu.addEventListener('mouseover', openMenu(idTimer, this.menu));
-	    this.menu.addEventListener('mouseout', closeMenu(this.menu));
-		function openMenu(idTimer, menu) {
-			clearTimeout(idTimer);
-			//setTimeout(closeMenu(menu), 5000, menu); 
-		}
-		function closeMenu(menu) {
-			menu.style.display = 'none';
-		}
 	}
 }
