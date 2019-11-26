@@ -88,7 +88,6 @@ function changeHash() {
 		}, 3000);
 	}
 	if (hash == '#clothing') {
-		console.log('dd');
 		let closes = document.querySelector('#closes');
  		content.appendChild(closes.content.cloneNode(true));
  		closesView();
